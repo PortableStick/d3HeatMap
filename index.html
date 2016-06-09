@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heat Map of Heat</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Oswald|Rokkitt' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="heading">
+      <h1 id="chartTitle">Monthly Global Land-Surface Temperature</h1>
+      <h2 id="chartSubTitle">1753 - 2015 (September)</h2>
+      <div id="chartDescription">Temperatures are in Celsius and reported as anomalies relative to the Jan 1951-Dec 1980 average temperature of 8.66 &deg;C +/- 0.07</div>
+    </div>
+    <div id="chart"></div>
+  </div>
+  <script src="node_modules/d3/d3.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

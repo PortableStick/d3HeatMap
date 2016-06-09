@@ -1,0 +1,58 @@
+path.domain{
+  fill: none;
+}
+
+.tooltip {
+  background: steelblue;
+  color: white;
+  position: absolute;
+  padding: 0.5em 0.9em;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.tooltip h1,
+.tooltip h2 {
+  padding: 0;
+  margin: 0.15em;
+  text-align: center;
+}
+
+.tooltip h1 {
+  font-family: 'Oswald', serif;
+}
+
+.tooltip h2 {
+  font-size: 1.2em;
+}
+
+.label {
+  font-size: 1.6em;
+  font-family: 'Oswald', serif;
+}
+
+#heading {
+  text-align: center;
+  color: #555;
+}
+
+#chartTitle,
+#chartSubTitle {
+  font-family: 'Oswald', serif;
+}
+
+.axis .tick,
+.legend,
+#chartDescription {
+  font-family: 'Rokkitt', serif;
+}
+
+.container {
+  background-color: #eee;
+  margin-top: 10vh;
+  box-shadow: 0px 23px 14px -14px black;
+}
+
+body {
+  background-color: #ccc;
+}
