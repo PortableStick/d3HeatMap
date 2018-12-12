@@ -2,7 +2,7 @@ path.domain{
   fill: none;
 }
 
-.tooltip {
+#tooltip {
   background: steelblue;
   color: white;
   position: absolute;
@@ -11,18 +11,18 @@ path.domain{
   border-radius: 5px;
 }
 
-.tooltip h1,
-.tooltip h2 {
+#tooltip h1,
+#tooltip h2 {
   padding: 0;
   margin: 0.15em;
   text-align: center;
 }
 
-.tooltip h1 {
+#tooltip h1 {
   font-family: 'Oswald', serif;
 }
 
-.tooltip h2 {
+#tooltip h2 {
   font-size: 1.2em;
 }
 

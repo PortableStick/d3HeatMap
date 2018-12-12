@@ -46,8 +46,8 @@ function heatMap() {
 
   function chart(selection) {
     d3.select(this).html(""); //Delete any other charts before redrawing
-debugger;
-    selection.each(data => {
+
+    selection.each(function(data) {
       const svg = d3
         .select(this)
         .append("svg")
@@ -89,21 +89,19 @@ debugger;
 
       zScale.domain(variances).range(chartColors);
 
-      xAxis.scale(xScale).tickValues(years.filter((d, i) => i % 20 !== 0));
+      xAxis.scale(xScale).tickValues(years.filter((d, i) => i % 20 === 0));
       yAxis.scale(yScale).tickFormat(day => monthDict[day]);
 
       const axes = svg
         .selectAll(".axis")
         .data([
           {
-            class: "x",
             axis: xAxis,
             x: 0,
             y: height,
             id: "x-axis"
           },
           {
-            class: "y",
             axis: yAxis,
             x: 0,
             y: 0,
@@ -119,7 +117,9 @@ debugger;
           id: d => d.id
         });
 
-      axes.each(d => d3.select(this).call(d.axis));
+      axes.each(function(d) {
+        d3.select(this).call(d.axis);
+      });
 
       const yText = d3
         .select(".y.axis")
@@ -272,11 +272,10 @@ debugger;
 window.onload = function() {
   d3.json("https://gregoftheweb.com/temps.json", (error, data) => {
     if (error) throw error;
-    const tempsChart = heatMap()
-      // .yLabel("Month")
-      // .xLabel("Year");
-    d3
-      .select("#chart")
+    const tempsChart = heatMap();
+    // .yLabel("Month")
+    // .xLabel("Year");
+    d3.select("#chart")
       .datum(data)
       .call(tempsChart);
   });
